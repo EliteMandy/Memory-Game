@@ -16,7 +16,7 @@
 
     <script>
     const emojis = ["😀","😀","🤣","🤣","🙂","🙂","🤩","🤩","🥵","🥵","🤬","🤬","😎","😎","🤑","🤑"];
-    var name = prompt('What is you Name');
+    var name = window.prompt('What is you Name');
         var Shuff_emojis = emojis.sort(() => (Math.random() > .5 ) ? 2 : -1);
         for(var i=0;i<emojis.length;i++){
             let box = document.createElement('div');
