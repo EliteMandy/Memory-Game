@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEMORY GAME || MAHENDRA SINGH</title>
+    <link rel="shortcut icon" type="image/jpeg" href="/image/th.jpeg"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,9 @@
 
     <script>
     const emojis = ["😀","😀","🤣","🤣","🙂","🙂","🤩","🤩","🥵","🥵","🤬","🤬","😎","😎","🤑","🤑"];
-    var name = window.prompt('What is you Name');
+    alert('MADE BY MAHENDRA SINGH');
+    let name = prompt('What is you Name');
+
         var Shuff_emojis = emojis.sort(() => (Math.random() > .5 ) ? 2 : -1);
         for(var i=0;i<emojis.length;i++){
             let box = document.createElement('div');
@@ -32,7 +35,8 @@
                                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen');
                                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen');
                                     if(document.querySelectorAll('.boxMatch').length == emojis.length){
-                                        alert('YAY! ',name,' YOU WON 🎉✨🎊');
+                                        alert('YAY! YOU WON 🎉✨🎊 '+name);
+                                        document.querySelector('.container').style.color='black';
                                     }
                             }
                             else{
