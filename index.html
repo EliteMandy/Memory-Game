@@ -6,19 +6,52 @@
     <title>MEMORY GAME || MAHENDRA SINGH</title>
     <link rel="shortcut icon" type="image/jpeg" href="/image/th.jpeg"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <h1>Memory game</h1>
+        <h1>😎 Memory game 😎</h1>
+        <p id="winner"></p>
+        <p id="counter"></p>
         <div class="game"></div>
         <button class="reset" onClick="window.location.reload()">RESET BUTTON</button>
     </div>
 
 
+
+    <div class="InvisibleDiv"></div>
+    
+      <!-- Your other content goes here -->
+    
+      <!-- Assuming you have Font Awesome JS included (for icons) -->
+      <div class="footer">
+        <div class="social-btns">
+            <!-- Using a loop to create the social buttons -->
+            <a href="https://www.facebook.com/ManuSe7en" class="btn facebook" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/cz_blnance__7Nc" class="btn twitter" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="mailto:manusingh98122@gmail.com" class="btn google" target="_blank">
+              <i class="fa fa-google"></i>
+            </a>
+            <a href="https://www.instagram.com/manu.se7en/" class="btn fa-instagram" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+      </div>
+      
+    <div class="footer">&copy;<span id="year"> </span><span> Your Company Name. All rights reserved.</span></div>
+
+    <script src="path/to/font-awesome.js"></script>
     <script>
+
+
+
     const emojis = ["😀","😀","🤣","🤣","🙂","🙂","🤩","🤩","🥵","🥵","🤬","🤬","😎","😎","🤑","🤑"];
     alert('MADE BY MAHENDRA SINGH');
-    let name = prompt('What is you Name');
+    let name = prompt('What is you Name ?');
 
         var Shuff_emojis = emojis.sort(() => (Math.random() > .5 ) ? 2 : -1);
         for(var i=0;i<emojis.length;i++){
@@ -35,8 +68,10 @@
                                     document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen');
                                     document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen');
                                     if(document.querySelectorAll('.boxMatch').length == emojis.length){
-                                        alert('YAY! YOU WON 🎉✨🎊 '+name);
-                                        document.querySelector('.container').style.color='black';
+                                        // alert('YAY! YOU WON 🎉✨🎊 '+name);
+                                        document.querySelector('#winner').setAttribute('style','color:white;font-size:x-large;');
+                                        document.querySelector('#winner').innerHTML = ('YAY! 🎉✨🎊 YOU WON '+name);
+                                        document.querySelector('.conatiner').style.color='black';
                                     }
                             }
                             else{
@@ -47,6 +82,13 @@
                 },500);
             }
             document.querySelector(' .game').appendChild(box);
+            
+        }
+
+        var count = 0;
+        box.onclick = function Stepcounter(){
+            count = count + 1;
+            document.getElementById('#Counter').innerHTML = count
         }
         </script>
 </body>
