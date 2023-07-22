@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #0c5e35;
+    background: #1664b2;
 }
 .container{
     position: relative;
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     flex-direction:column;
     gap: 20px;
-    background-color: #20783a;
+    background-color: #23333f;
     padding: 40px 60px;
 }
 h1{
@@ -76,7 +76,7 @@ h1{
     content:'';
     position: absolute;
     inset: 0;
-    background:rgb(13, 193, 121);
+    background:rgb(172, 152, 23);
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
