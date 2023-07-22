@@ -11,8 +11,10 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #1664b2;
+    flex-direction: column;
 }
 .container{
+    margin-top:50px;
     position: relative;
     display:flex;
     align-items: center;
@@ -84,4 +86,172 @@ h1{
 .boxOpen:after,.boxMatch:after
 {
     transform: rotateY(180deg);
+}
+
+
+.InvisibleDiv{
+    display:flex;
+    height:50px;
+
+}
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+.footer {
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #0fb692;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .CopyRight{
+    margin-top: 1px;
+  }
+
+
+
+  /*BUTTON*/
+@import url('//codepen.io/chrisdothtml/pen/ojLzJK.css');
+
+/* Custom variables */
+:root {
+  --btn-size: 30px;
+}
+
+/* Custom colors for social sites */
+:root {
+  --facebook: #3B5998;
+  --twitter: #3CF;
+  --google: #DC4A38;
+  --dribbble: #F26798;
+  --skype: #00AFF0;
+  --instagram: #d42795;
+}
+
+/* Button styles */
+.social-btns {
+  height: var(--btn-size);
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-btns .btn {
+  display:inline-block;
+  background-color: #fff;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  line-height: var(--btn-size);
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0.99; /* Overflow bug fix */
+}
+
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.101, -0.105, 0.43, 1.59);
+}
+
+.social-btns .btn .fa {
+  font-size: 18px;
+  vertical-align: middle;
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.101, -0.105, 0.43, 1.59);
+}
+
+/* Inactive button styles */
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+
+.social-btns .btn .fa {
+  transform: scale(0.8);
+}
+
+.social-btns .btn.facebook:before {
+  background-color: var(--facebook);
+}
+
+.social-btns .btn.facebook .fa {
+  color: var(--facebook);
+}
+
+.social-btns .btn.twitter:before {
+  background-color: var(--twitter);
+}
+
+.social-btns .btn.twitter .fa {
+  color: var(--twitter);
+}
+
+.social-btns .btn.google:before {
+  background-color: var(--google);
+}
+
+.social-btns .btn.google .fa {
+  color: var(--google);
+}
+
+.social-btns .btn.dribbble:before {
+  background-color: var(--dribbble);
+}
+
+.social-btns .btn.dribbble .fa {
+  color: var(--dribbble);
+}
+
+.social-btns .btn.skype:before {
+  background-color: var(--skype);
+}
+
+.social-btns .btn.skype .fa {
+  color: var(--skype);
+}
+
+.social-btns .btn.instagram:before {
+  background-color: var(--instagram);
+}
+
+.social-btns .btn.instagram .fa {
+  color: var(--instagram);
+}
+
+/* Active button styles */
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  transform: scale(1);
 }
